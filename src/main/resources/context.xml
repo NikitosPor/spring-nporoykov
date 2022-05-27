@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="filePath" class="ru.otus.springproject.dao.FilePathDao">
-        <constructor-arg name="filePath" value="src/main/resources/questions.csv"/>
+        <constructor-arg name="filePath" value="/questions.csv"/>
     </bean>
 
     <bean id="scanService" class="ru.otus.springproject.service.ScannerCSVService">

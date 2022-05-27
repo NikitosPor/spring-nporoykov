@@ -3,12 +3,10 @@ package ru.otus.springproject.service;
 import ru.otus.springproject.dao.FilePathDao;
 import ru.otus.springproject.domain.QuestionWthAnswrs;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 
@@ -18,7 +16,7 @@ public class ScannerCSVService {
     private BufferedReader reader = null;
 
     public ScannerCSVService(FilePathDao file) throws FileNotFoundException {
-        this.reader = new BufferedReader(new FileReader(file.getFilePath()));
+        this.reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(this.getClass().getResourceAsStream(file.getFilePath()))));
     }
 
     public void saveQuestion() throws IOException {
