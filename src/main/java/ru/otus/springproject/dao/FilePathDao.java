@@ -15,7 +15,7 @@ public class FilePathDao {
     private final String filePathDest;
 
     public FilePathDao(String filePath) {
-        filePathDest = filePath;
+        this.filePathDest = filePath;
     }
 
     public List<QuestionWithAnswers> getAllQuestionsAndAnswers() throws IOException {
@@ -30,9 +30,9 @@ public class FilePathDao {
                     listOfStrings.add(data);
                 }
                 QuestionWithAnswers questionWithAnswers = new QuestionWithAnswers(listOfStrings);
-                listOfQuestionsWithAnswers.add(questionWithAnswers);
+                this.listOfQuestionsWithAnswers.add(questionWithAnswers);
             }
-            return listOfQuestionsWithAnswers;
+            return this.listOfQuestionsWithAnswers;
         }//try
     }
 }

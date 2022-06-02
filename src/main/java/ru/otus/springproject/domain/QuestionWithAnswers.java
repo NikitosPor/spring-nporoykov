@@ -24,4 +24,8 @@ public final class QuestionWithAnswers {
     public String getAnswerC(){
         return this.questionAndAnswers.get(3);
     }
+
+    public String getRightAnswer(){
+        return this.questionAndAnswers.get(4);
+    }
 }
