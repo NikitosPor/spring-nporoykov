@@ -1,8 +1,5 @@
 package ru.otus.springproject.domain;
 
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
-
 public final class Student {
     private final String name;
     private final String sureName;
